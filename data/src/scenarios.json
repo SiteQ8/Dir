@@ -1,0 +1,494 @@
+{
+ "scenarios": [
+  {
+   "id": "remote-hpp",
+   "order": 1,
+   "en": "Remote access to the high-pressure pumps",
+   "ar": "وصول عن بُعد إلى مضخات الضغط العالي",
+   "inspiration": {
+    "en": "Inspired by intrusions that began with stolen remote access to an operator network.",
+    "ar": "مستوحى من اختراقات بدأت بوصول عن بُعد مسروق إلى شبكة المشغّل."
+   },
+   "target_var": "hp_pressure",
+   "critical_step": "s1_manip",
+   "safety_step": null,
+   "effect_per_tick": 0.9,
+   "steps": [
+    {
+     "id": "s1_access",
+     "en": "Stolen remote credentials",
+     "ar": "بيانات دخول عن بُعد مسروقة",
+     "technique": {
+      "id": "T0822",
+      "en": "External Remote Services",
+      "ar": "خدمات الوصول عن بُعد الخارجية"
+     },
+     "summary": {
+      "en": "The attacker signs in through the remote access gateway with credentials taken from a contractor.",
+      "ar": "يدخل المهاجم عبر بوابة الوصول عن بُعد ببيانات أُخذت من مقاول."
+     },
+     "blocked_by": [
+      "mfa_remote"
+     ],
+     "detected_by": [
+      "logging_soc"
+     ]
+    },
+    {
+     "id": "s1_pivot",
+     "en": "Cross into the plant network",
+     "ar": "العبور إلى شبكة المحطة",
+     "technique": {
+      "id": "T0866",
+      "en": "Exploitation of Remote Services",
+      "ar": "استغلال خدمات الوصول عن بُعد"
+     },
+     "summary": {
+      "en": "With no boundary in the way the attacker crosses from the business network into the plant network.",
+      "ar": "مع غياب أي حاجز يعبر المهاجم من شبكة الأعمال إلى شبكة المحطة."
+     },
+     "blocked_by": [
+      "idmz",
+      "segmentation"
+     ],
+     "detected_by": []
+    },
+    {
+     "id": "s1_hmi",
+     "en": "Reach an operator console",
+     "ar": "الوصول إلى شاشة مشغّل",
+     "technique": {
+      "id": "T0855",
+      "en": "Unauthorized Command Message",
+      "ar": "رسالة أمر غير مصرّح بها"
+     },
+     "summary": {
+      "en": "The attacker reaches an operator console and prepares to send commands to the process.",
+      "ar": "يصل المهاجم إلى شاشة مشغّل ويتهيأ لإرسال أوامر إلى العملية."
+     },
+     "blocked_by": [
+      "least_priv"
+     ],
+     "detected_by": []
+    },
+    {
+     "id": "s1_manip",
+     "en": "Drive up the pump pressure",
+     "ar": "رفع ضغط المضخة",
+     "technique": {
+      "id": "T0836",
+      "en": "Modify Parameter",
+      "ar": "تعديل معامل التشغيل"
+     },
+     "summary": {
+      "en": "The attacker raises the high-pressure pump setpoint so the discharge pressure climbs toward the membranes.",
+      "ar": "يرفع المهاجم ضبط مضخة الضغط العالي فيرتفع ضغط الطرد نحو الأغشية."
+     },
+     "blocked_by": [],
+     "detected_by": [
+      "net_monitor",
+      "ids_ot"
+     ]
+    }
+   ],
+   "lesson": {
+    "en": "A stolen login should never reach the process, and an intact safety system keeps a manipulation from bursting the membranes.",
+    "ar": "لا ينبغي أن يصل دخول مسروق إلى العملية أبدًا كما أن نظام السلامة السليم يمنع التلاعب من أن يفجّر الأغشية."
+   },
+   "playbook": {
+    "prepare": {
+     "en": "Put remote access behind a jump host and rehearse a control room response for a pressure alarm.",
+     "ar": "اجعل الوصول عن بُعد خلف مضيف وسيط ودرّب غرفة التحكم على الاستجابة لإنذار الضغط."
+    },
+    "detect": {
+     "en": "Treat an out of place setpoint change as an incident, record it and report it to the National Cybersecurity Authority.",
+     "ar": "عامل أي تغيير ضبط في غير محله كحادث وسجّله وأبلغ الهيئة الوطنية للأمن السيبراني به."
+    },
+    "assess": {
+     "en": "Confirm which console issued the change and whether the high-pressure discharge is rising toward its trip.",
+     "ar": "تأكد من الشاشة التي أصدرت التغيير ومما إذا كان ضغط الطرد العالي يرتفع نحو حد الإيقاف."
+    },
+    "contain": {
+     "en": "Cut the remote session, isolate the console and let the safety trip protect the pumps and membranes.",
+     "ar": "اقطع الجلسة عن بُعد واعزل الشاشة ودع إيقاف السلامة يحمي المضخات والأغشية."
+    },
+    "eradicate": {
+     "en": "Revoke the stolen credentials and remove the attacker's access from the gateway.",
+     "ar": "ألغِ البيانات المسروقة وأزل وصول المهاجم من البوابة."
+    },
+    "recover": {
+     "en": "Return the setpoint to normal under a verified operator and restart the pumps from a safe state.",
+     "ar": "أعد الضبط إلى وضعه الطبيعي بإشراف مشغّل موثوق وأعد تشغيل المضخات من حالة آمنة."
+    },
+    "postincident": {
+     "en": "Enforce multifactor remote access and a boundary between the business and plant networks.",
+     "ar": "افرض وصولًا عن بُعد متعدد العوامل وحاجزًا بين شبكتي الأعمال والمحطة."
+    }
+   }
+  },
+  {
+   "id": "safety-target",
+   "order": 2,
+   "en": "Targeting the safety system",
+   "ar": "استهداف نظام السلامة",
+   "inspiration": {
+    "en": "Inspired by an attack that downloaded new logic to a safety controller to disable its protection.",
+    "ar": "مستوحى من هجوم نزّل منطقًا جديدًا إلى متحكم سلامة ليعطّل حمايته."
+   },
+   "target_var": "hp_pressure",
+   "critical_step": "s2_pressure",
+   "safety_step": "s2_reprogram",
+   "effect_per_tick": 1.1,
+   "steps": [
+    {
+     "id": "s2_phish",
+     "en": "Phishing an engineer",
+     "ar": "تصيّد مهندس",
+     "technique": {
+      "id": "T0865",
+      "en": "Spearphishing Attachment",
+      "ar": "مرفق تصيّد موجّه"
+     },
+     "summary": {
+      "en": "The attacker sends a crafted attachment that gives a foothold on an engineer's machine.",
+      "ar": "يرسل المهاجم مرفقًا مُعدًّا يمنحه موطئ قدم على جهاز مهندس."
+     },
+     "blocked_by": [
+      "email_filter"
+     ],
+     "detected_by": []
+    },
+    {
+     "id": "s2_ews",
+     "en": "Take the engineering workstation",
+     "ar": "السيطرة على محطة العمل الهندسية",
+     "technique": {
+      "id": "T0873",
+      "en": "Project File Infection",
+      "ar": "إصابة ملف المشروع"
+     },
+     "summary": {
+      "en": "From the engineer's machine the attacker takes the engineering workstation that programs the controllers.",
+      "ar": "من جهاز المهندس يسيطر المهاجم على محطة العمل الهندسية التي تبرمج أجهزة التحكم."
+     },
+     "blocked_by": [
+      "allowlist_ews",
+      "edr_l3"
+     ],
+     "detected_by": []
+    },
+    {
+     "id": "s2_reach_sis",
+     "en": "Reach the safety controller",
+     "ar": "الوصول إلى متحكم السلامة",
+     "technique": {
+      "id": "T0812",
+      "en": "Default Credentials",
+      "ar": "بيانات الدخول الافتراضية"
+     },
+     "summary": {
+      "en": "Unchanged default credentials let the attacker connect to the safety controller.",
+      "ar": "تتيح بيانات الدخول الافتراضية غير المغيّرة للمهاجم الاتصال بمتحكم السلامة."
+     },
+     "blocked_by": [
+      "sis_zone"
+     ],
+     "detected_by": [
+      "ids_ot"
+     ]
+    },
+    {
+     "id": "s2_reprogram",
+     "en": "Reprogram the safety logic",
+     "ar": "إعادة برمجة منطق السلامة",
+     "technique": {
+      "id": "T0843",
+      "en": "Program Download",
+      "ar": "تنزيل برنامج التحكم"
+     },
+     "summary": {
+      "en": "The attacker downloads new logic to the safety controller so it will no longer trip on a high reading.",
+      "ar": "ينزّل المهاجم منطقًا جديدًا إلى متحكم السلامة حتى لا يعود يشغّل الإيقاف عند ارتفاع القراءة."
+     },
+     "blocked_by": [
+      "sis_keyswitch"
+     ],
+     "detected_by": [
+      "net_monitor"
+     ]
+    },
+    {
+     "id": "s2_pressure",
+     "en": "Push the pumps past the safe limit",
+     "ar": "دفع المضخات لتجاوز الحد الآمن",
+     "technique": {
+      "id": "T0831",
+      "en": "Manipulation of Control",
+      "ar": "التلاعب بالتحكم"
+     },
+     "summary": {
+      "en": "With the safety logic disabled the attacker drives the high-pressure discharge past its safe limit.",
+      "ar": "مع تعطيل منطق السلامة يدفع المهاجم ضغط الطرد العالي لتجاوز حده الآمن."
+     },
+     "blocked_by": [],
+     "detected_by": [
+      "net_monitor"
+     ]
+    }
+   ],
+   "lesson": {
+    "en": "The safety system is the last line before harm, so it belongs in its own zone with its key in run and its logic protected from change.",
+    "ar": "نظام السلامة هو الخط الأخير قبل الضرر لذا يجب أن يكون في منطقة خاصة به ومفتاحه على وضع التشغيل ومنطقه محميًا من التغيير."
+   },
+   "playbook": {
+    "prepare": {
+     "en": "Isolate the safety system, keep its key switch in run and baseline its logic so any change stands out.",
+     "ar": "اعزل نظام السلامة وأبقِ مفتاحه على وضع التشغيل وسجّل منطقه المرجعي حتى يظهر أي تغيير."
+    },
+    "detect": {
+     "en": "Treat a download to the safety controller as a critical incident and report it to the National Cybersecurity Authority at once.",
+     "ar": "عامل أي تنزيل إلى متحكم السلامة كحادث حرج وأبلغ الهيئة الوطنية للأمن السيبراني به فورًا."
+    },
+    "assess": {
+     "en": "Confirm whether the safety logic was changed and whether the discharge pressure is still protected.",
+     "ar": "تأكد مما إذا كان منطق السلامة قد تغيّر ومما إذا كان ضغط الطرد لا يزال محميًا."
+    },
+    "contain": {
+     "en": "Disconnect the safety controller from the network and fall back to a manual safe shutdown of the pumps.",
+     "ar": "افصل متحكم السلامة عن الشبكة وارجع إلى إيقاف آمن يدوي للمضخات."
+    },
+    "eradicate": {
+     "en": "Restore the trusted safety logic from a known good copy and remove the attacker from the engineering workstation.",
+     "ar": "استعد منطق السلامة الموثوق من نسخة سليمة وأزل المهاجم من محطة العمل الهندسية."
+    },
+    "recover": {
+     "en": "Validate the safety logic against its baseline, prove it trips on test and only then return to normal operation.",
+     "ar": "تحقق من منطق السلامة مقابل مرجعه وأثبت أنه يشغّل الإيقاف عند الاختبار ثم عد إلى التشغيل الطبيعي."
+    },
+    "postincident": {
+     "en": "Change all default credentials, protect program downloads and audit the safety logic regularly.",
+     "ar": "غيّر كل بيانات الدخول الافتراضية واحمِ تنزيل البرامج ودقّق منطق السلامة بانتظام."
+    }
+   }
+  },
+  {
+   "id": "false-readings",
+   "order": 3,
+   "en": "A faked chlorine reading",
+   "ar": "قراءة كلور مزيفة",
+   "inspiration": {
+    "en": "Inspired by attacks that manipulate the operator's view while the real process drifts.",
+    "ar": "مستوحى من هجمات تتلاعب برؤية المشغّل بينما تنحرف العملية الحقيقية."
+   },
+   "target_var": "cl2_residual",
+   "critical_step": "s3_drift",
+   "safety_step": null,
+   "effect_per_tick": 0.12,
+   "steps": [
+    {
+     "id": "s3_historian",
+     "en": "Land on the historian",
+     "ar": "الوصول إلى المؤرّخ",
+     "technique": {
+      "id": "T0859",
+      "en": "Valid Accounts",
+      "ar": "حسابات صحيحة"
+     },
+     "summary": {
+      "en": "The attacker uses valid accounts to land on the data historian that sits between the plant and the board.",
+      "ar": "يستخدم المهاجم حسابات صحيحة للوصول إلى مؤرّخ البيانات الواقع بين المحطة وغرفة التحكم."
+     },
+     "blocked_by": [
+      "allowlist_ews"
+     ],
+     "detected_by": [
+      "edr_l3"
+     ]
+    },
+    {
+     "id": "s3_mitm",
+     "en": "Sit between the analyzer and the board",
+     "ar": "الجلوس بين المحلل وغرفة التحكم",
+     "technique": {
+      "id": "T0830",
+      "en": "Adversary-in-the-Middle",
+      "ar": "الخصم في الوسط"
+     },
+     "summary": {
+      "en": "The attacker places themselves between the chlorine analyzer and the operator console.",
+      "ar": "يضع المهاجم نفسه بين محلل الكلور وشاشة المشغّل."
+     },
+     "blocked_by": [
+      "hmi_integrity"
+     ],
+     "detected_by": [
+      "net_monitor"
+     ]
+    },
+    {
+     "id": "s3_drift",
+     "en": "Show a safe reading while over-dosing",
+     "ar": "إظهار قراءة آمنة أثناء زيادة الجرعة",
+     "technique": {
+      "id": "T0856",
+      "en": "Spoof Reporting Message",
+      "ar": "انتحال رسالة التقارير"
+     },
+     "summary": {
+      "en": "The board is shown a normal chlorine level while the real dose climbs toward an unsafe level in the product water.",
+      "ar": "تُعرض على غرفة التحكم قراءة كلور طبيعية بينما ترتفع الجرعة الحقيقية نحو مستوى غير آمن في الماء المنتَج."
+     },
+     "blocked_by": [
+      "hmi_integrity"
+     ],
+     "detected_by": []
+    }
+   ],
+   "lesson": {
+    "en": "A spoofed board must never be the only line protecting drinking water, and an independent safety analyzer still trips when the view is faked.",
+    "ar": "لا ينبغي أن تكون شاشة منتحَلة الخط الوحيد الذي يحمي ماء الشرب كما أن محلل السلامة المستقل يشغّل الإيقاف حتى عندما تُزيّف الرؤية."
+   },
+   "playbook": {
+    "prepare": {
+     "en": "Give the safety system its own chlorine analyzer independent of the board and rehearse a water quality alarm.",
+     "ar": "امنح نظام السلامة محلل كلور خاصًا به مستقلًا عن غرفة التحكم ودرّب على إنذار جودة الماء."
+    },
+    "detect": {
+     "en": "Treat a mismatch between the board and the independent analyzer as an incident and report it to the National Cybersecurity Authority.",
+     "ar": "عامل أي تعارض بين غرفة التحكم والمحلل المستقل كحادث وأبلغ الهيئة الوطنية للأمن السيبراني به."
+    },
+    "assess": {
+     "en": "Confirm the true chlorine level from the independent analyzer and whether any product water left for the network.",
+     "ar": "تأكد من مستوى الكلور الحقيقي من المحلل المستقل ومما إذا كان أي ماء منتَج قد غادر إلى الشبكة."
+    },
+    "contain": {
+     "en": "Let the safety trip isolate the dosing and divert the off-spec water to waste before it reaches the network.",
+     "ar": "دع إيقاف السلامة يعزل الجرعات ويحوّل الماء المخالف للمواصفة إلى الصرف قبل أن يصل إلى الشبكة."
+    },
+    "eradicate": {
+     "en": "Remove the attacker from the historian and restore trusted communication between the analyzer and the board.",
+     "ar": "أزل المهاجم من المؤرّخ واستعد الاتصال الموثوق بين المحلل وغرفة التحكم."
+    },
+    "recover": {
+     "en": "Flush any affected line, confirm the chlorine is back within its safe band and return the water to the network.",
+     "ar": "اغسل أي خط متأثر وتأكد من عودة الكلور إلى نطاقه الآمن وأعد الماء إلى الشبكة."
+    },
+    "postincident": {
+     "en": "Cross check readings against independent sensors and monitor the plant network for adversary in the middle activity.",
+     "ar": "طابق القراءات مع مجسات مستقلة وراقب شبكة المحطة بحثًا عن نشاط الخصم في الوسط."
+    }
+   }
+  },
+  {
+   "id": "ransomware-ops",
+   "order": 4,
+   "en": "Ransomware across operations",
+   "ar": "فدية تجتاح العمليات",
+   "inspiration": {
+    "en": "Inspired by ransomware that spread from business systems and halted production.",
+    "ar": "مستوحى من فدية انتشرت من أنظمة الأعمال فأوقفت الإنتاج."
+   },
+   "target_var": null,
+   "critical_step": "s4_encrypt",
+   "safety_step": null,
+   "effect_per_tick": 0,
+   "steps": [
+    {
+     "id": "s4_phish",
+     "en": "Phishing into the business network",
+     "ar": "تصيّد إلى شبكة الأعمال",
+     "technique": {
+      "id": "T0865",
+      "en": "Spearphishing Attachment",
+      "ar": "مرفق تصيّد موجّه"
+     },
+     "summary": {
+      "en": "The attacker gains a foothold on the business network through a phishing attachment.",
+      "ar": "يحصل المهاجم على موطئ قدم في شبكة الأعمال عبر مرفق تصيّد."
+     },
+     "blocked_by": [
+      "email_filter"
+     ],
+     "detected_by": []
+    },
+    {
+     "id": "s4_spread",
+     "en": "Spread toward operations",
+     "ar": "الانتشار نحو العمليات",
+     "technique": {
+      "id": "T0867",
+      "en": "Lateral Tool Transfer",
+      "ar": "نقل الأدوات جانبيًا"
+     },
+     "summary": {
+      "en": "The attacker moves tools across the network toward the operations servers.",
+      "ar": "ينقل المهاجم أدواته عبر الشبكة نحو خوادم العمليات."
+     },
+     "blocked_by": [
+      "idmz",
+      "segmentation",
+      "patch_ews"
+     ],
+     "detected_by": [
+      "net_monitor"
+     ]
+    },
+    {
+     "id": "s4_encrypt",
+     "en": "Encrypt the operations hosts",
+     "ar": "تشفير خوادم العمليات",
+     "technique": {
+      "id": "T0828",
+      "en": "Loss of Productivity and Revenue",
+      "ar": "فقدان الإنتاجية والإيرادات"
+     },
+     "summary": {
+      "en": "The attacker encrypts the operations hosts so the historian and consoles go dark and production stops.",
+      "ar": "يشفّر المهاجم خوادم العمليات فيتعطل المؤرّخ والشاشات ويتوقف الإنتاج."
+     },
+     "blocked_by": [],
+     "detected_by": [
+      "edr_l3",
+      "backups",
+      "logging_soc",
+      "net_monitor"
+     ]
+    }
+   ],
+   "lesson": {
+    "en": "A boundary and offline backups keep a business ransomware from stopping the water, and recovery is only as fast as the last tested backup.",
+    "ar": "يمنع الحاجز والنسخ الاحتياطية غير المتصلة فدية الأعمال من إيقاف الماء كما أن سرعة التعافي رهن آخر نسخة احتياطية مختبرة."
+   },
+   "playbook": {
+    "prepare": {
+     "en": "Separate the business and plant networks and keep offline tested backups of the operations hosts.",
+     "ar": "افصل شبكتي الأعمال والمحطة واحتفظ بنسخ احتياطية غير متصلة ومختبرة لخوادم العمليات."
+    },
+    "detect": {
+     "en": "Treat spreading encryption as a critical incident, record its reach and report it to the National Cybersecurity Authority.",
+     "ar": "عامل التشفير المنتشر كحادث حرج وسجّل مداه وأبلغ الهيئة الوطنية للأمن السيبراني به."
+    },
+    "assess": {
+     "en": "Judge how far the encryption reached and whether the plant can keep running on local control.",
+     "ar": "قدّر إلى أي مدى وصل التشفير ومما إذا كانت المحطة تستطيع الاستمرار على التحكم المحلي."
+    },
+    "contain": {
+     "en": "Cut the link between the business and plant networks and keep the process on safe local control.",
+     "ar": "اقطع الوصلة بين شبكتي الأعمال والمحطة وأبقِ العملية على تحكم محلي آمن."
+    },
+    "eradicate": {
+     "en": "Remove the ransomware from every affected host and confirm the operations network is clean.",
+     "ar": "أزل الفدية من كل خادم متأثر وتأكد من نظافة شبكة العمليات."
+    },
+    "recover": {
+     "en": "Restore the operations hosts from clean offline backups and bring the consoles and historian back.",
+     "ar": "استعد خوادم العمليات من نسخ احتياطية نظيفة غير متصلة وأعد الشاشات والمؤرّخ."
+    },
+    "postincident": {
+     "en": "Harden and patch the operations hosts and test the backups so the next recovery is faster.",
+     "ar": "حصّن خوادم العمليات وحدّثها واختبر النسخ الاحتياطية حتى يكون التعافي التالي أسرع."
+    }
+   }
+  }
+ ]
+}

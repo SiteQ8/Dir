@@ -1,0 +1,401 @@
+{
+ "version": "OTCC-1:2022",
+ "domains": [
+  {
+   "id": "1",
+   "en": "Cybersecurity Governance",
+   "ar": "حوكمة الأمن السيبراني"
+  },
+  {
+   "id": "2",
+   "en": "Cybersecurity Defense",
+   "ar": "تعزيز الأمن السيبراني"
+  },
+  {
+   "id": "3",
+   "en": "Cybersecurity Resilience",
+   "ar": "صمود الأمن السيبراني"
+  },
+  {
+   "id": "4",
+   "en": "Third-Party Cybersecurity",
+   "ar": "الأمن السيبراني للأطراف الخارجية"
+  }
+ ],
+ "subdomains": [
+  {
+   "id": "1-1",
+   "domain": "1",
+   "title_en": "Cybersecurity Policies and Procedures",
+   "title_ar": "سياسات الأمن السيبراني وإجراءاته",
+   "objective_en": "To ensure that OT/ICS cybersecurity requirements are documented, communicated, and complied with by the organization as per related laws and regulations, and organizational requirements.",
+   "objective_ar": "توثيق متطلبات الأمن السيبراني للأنظمة التشغيلية ونشرها والالتزام بها."
+  },
+  {
+   "id": "1-2",
+   "domain": "1",
+   "title_en": "Cybersecurity Roles and Responsibilities",
+   "title_ar": "أدوار الأمن السيبراني ومسؤولياته",
+   "objective_en": "To ensure that roles and responsibilities are defined for all parties participating in implementing the OTCC within the organization.",
+   "objective_ar": "تحديد الأدوار والمسؤوليات لكل من يشارك في تطبيق ضوابط الأنظمة التشغيلية."
+  },
+  {
+   "id": "1-3",
+   "domain": "1",
+   "title_en": "Cybersecurity Risk Management",
+   "title_ar": "إدارة مخاطر الأمن السيبراني",
+   "objective_en": "To ensure managing cybersecurity risks in a methodological approach in order to protect the organization's OT/ICS assets as per organizational policies and procedures, and related laws and regulations.",
+   "objective_ar": "إدارة مخاطر الأمن السيبراني بمنهجية لحماية أصول الأنظمة التشغيلية."
+  },
+  {
+   "id": "1-4",
+   "domain": "1",
+   "title_en": "Cybersecurity in Industrial Control System Project Management",
+   "title_ar": "الأمن السيبراني في إدارة مشاريع أنظمة التحكم الصناعي",
+   "objective_en": "To ensure that cybersecurity requirements are included in project management methodology and procedures in order to maintain safe operations, confidentiality, integrity, and availability of OT/ICS assets.",
+   "objective_ar": "تضمين متطلبات الأمن السيبراني في إدارة مشاريع الأنظمة التشغيلية للحفاظ على تشغيل آمن."
+  },
+  {
+   "id": "1-5",
+   "domain": "1",
+   "title_en": "Cybersecurity in Change Management",
+   "title_ar": "الأمن السيبراني في إدارة التغيير",
+   "objective_en": "To ensure that cybersecurity requirements are included in change management methodology and procedures in order to maintain safe implementation of change requests in the OT/ICS environment.",
+   "objective_ar": "تضمين متطلبات الأمن السيبراني في إدارة التغيير لتطبيق آمن لطلبات التغيير في بيئة الأنظمة التشغيلية."
+  },
+  {
+   "id": "1-6",
+   "domain": "1",
+   "title_en": "Periodical Cybersecurity Review and Audit",
+   "title_ar": "المراجعة والتدقيق الدوري للأمن السيبراني",
+   "objective_en": "To ensure that OT/ICS cybersecurity controls are implemented and in compliance with organizational policies and procedures, as well as related national and international laws, regulations and agreements.",
+   "objective_ar": "التأكد من تطبيق ضوابط الأمن السيبراني للأنظمة التشغيلية والالتزام بالسياسات والأنظمة ذات العلاقة."
+  },
+  {
+   "id": "1-7",
+   "domain": "1",
+   "title_en": "Cybersecurity in Human Resources",
+   "title_ar": "الأمن السيبراني في الموارد البشرية",
+   "objective_en": "To ensure that cybersecurity risks and requirements related to OT/ICS personnel are managed efficiently prior to employment, during employment, and after termination as per organizational policies and procedures.",
+   "objective_ar": "إدارة مخاطر الأمن السيبراني المتعلقة بالعاملين في الأنظمة التشغيلية قبل الخدمة وأثناءها وبعدها."
+  },
+  {
+   "id": "1-8",
+   "domain": "1",
+   "title_en": "Cybersecurity Awareness and Training Program",
+   "title_ar": "برنامج التوعية والتدريب بالأمن السيبراني",
+   "objective_en": "To ensure that personnel are aware of their cybersecurity responsibilities and have the required cybersecurity awareness, training, skills, and credentials to protect the organization's OT/ICS assets.",
+   "objective_ar": "توعية العاملين بمسؤولياتهم في الأمن السيبراني وتزويدهم بالتدريب اللازم لحماية أصول الأنظمة التشغيلية."
+  },
+  {
+   "id": "2-1",
+   "domain": "2",
+   "title_en": "Asset Management",
+   "title_ar": "إدارة الأصول",
+   "objective_en": "To ensure that the organization has an accurate and detailed inventory of OT/ICS assets to support cybersecurity and operational requirements and maintain uptime, safe operations, confidentiality, integrity, and availability.",
+   "objective_ar": "الاحتفاظ بجرد دقيق ومفصل لأصول الأنظمة التشغيلية لدعم التشغيل الآمن واستمراريته."
+  },
+  {
+   "id": "2-2",
+   "domain": "2",
+   "title_en": "Identity and Access Management",
+   "title_ar": "إدارة الهويات والصلاحيات",
+   "objective_en": "To ensure secure and restricted logical access to OT/ICS assets in order to prevent unauthorized access and allow only authorized access for users.",
+   "objective_ar": "تقييد الوصول المنطقي إلى أصول الأنظمة التشغيلية على المصرح لهم فقط."
+  },
+  {
+   "id": "2-3",
+   "domain": "2",
+   "title_en": "System and Processing Facilities Protection",
+   "title_ar": "حماية الأنظمة ومرافق المعالجة",
+   "objective_en": "To ensure the protection of OT/ICS systems and processing facilities, including workstations, servers and Safety Instrumented Systems, against cyber risks.",
+   "objective_ar": "حماية أنظمة الأنظمة التشغيلية ومرافق معالجتها بما فيها أنظمة السلامة من المخاطر السيبرانية."
+  },
+  {
+   "id": "2-4",
+   "domain": "2",
+   "title_en": "Networks Security Management",
+   "title_ar": "إدارة أمن الشبكات",
+   "objective_en": "To ensure the protection of the organization's OT/ICS networks from cyber risks.",
+   "objective_ar": "حماية شبكات الأنظمة التشغيلية في الجهة من المخاطر السيبرانية."
+  },
+  {
+   "id": "2-5",
+   "domain": "2",
+   "title_en": "Mobile Devices Security",
+   "title_ar": "أمن الأجهزة المحمولة",
+   "objective_en": "To ensure the protection of mobile devices from cyber risks and the secure handling of the organization's sensitive data.",
+   "objective_ar": "حماية الأجهزة المحمولة من المخاطر السيبرانية وضمان التعامل الآمن مع البيانات الحساسة."
+  },
+  {
+   "id": "2-6",
+   "domain": "2",
+   "title_en": "Data and Information Protection",
+   "title_ar": "حماية البيانات والمعلومات",
+   "objective_en": "To ensure the confidentiality, integrity, and availability of the organization's data and information as per organizational policies and procedures, and related laws and regulations.",
+   "objective_ar": "حماية سرية بيانات الجهة وسلامتها وتوافرها."
+  },
+  {
+   "id": "2-7",
+   "domain": "2",
+   "title_en": "Cryptography",
+   "title_ar": "التشفير",
+   "objective_en": "To ensure the proper and efficient use of cryptography to protect information assets as per organizational policies and procedures, and related laws and regulations.",
+   "objective_ar": "الاستخدام السليم والفعّال للتشفير لحماية أصول المعلومات."
+  },
+  {
+   "id": "2-8",
+   "domain": "2",
+   "title_en": "Backup and Recovery Management",
+   "title_ar": "إدارة النسخ الاحتياطي والاسترجاع",
+   "objective_en": "To ensure the protection of the organization's data and information, including systems and software configurations, from cyber risks.",
+   "objective_ar": "حماية بيانات الجهة وأنظمتها وإعداداتها من المخاطر السيبرانية عبر النسخ الاحتياطي."
+  },
+  {
+   "id": "2-9",
+   "domain": "2",
+   "title_en": "Vulnerabilities Management",
+   "title_ar": "إدارة الثغرات",
+   "objective_en": "To ensure timely detection and effective remediation of technical vulnerabilities to prevent or minimize the probability of exploiting them to launch cyber-attacks.",
+   "objective_ar": "الاكتشاف المبكر للثغرات التقنية ومعالجتها لمنع استغلالها."
+  },
+  {
+   "id": "2-10",
+   "domain": "2",
+   "title_en": "Penetration Testing",
+   "title_ar": "اختبار الاختراق",
+   "objective_en": "To assess and evaluate the efficiency of the organization's cybersecurity defenses through simulated cyber-attacks to discover unknown weaknesses in the technical infrastructure.",
+   "objective_ar": "تقييم كفاءة الدفاعات عبر هجمات محاكاة لاكتشاف نقاط الضعف الخفية."
+  },
+  {
+   "id": "2-11",
+   "domain": "2",
+   "title_en": "Cybersecurity Event Logs and Monitoring Management",
+   "title_ar": "إدارة سجلات أحداث الأمن السيبراني ومراقبتها",
+   "objective_en": "To ensure timely collection, analysis, and monitoring of cybersecurity events for early detection of potential cyber-attacks.",
+   "objective_ar": "جمع أحداث الأمن السيبراني وتحليلها ومراقبتها للاكتشاف المبكر للهجمات."
+  },
+  {
+   "id": "2-12",
+   "domain": "2",
+   "title_en": "Cybersecurity Incident and Threat Management",
+   "title_ar": "إدارة حوادث وتهديدات الأمن السيبراني",
+   "objective_en": "To ensure timely identification, detection, effective management, and handling of cybersecurity incidents and threats to protect OT/ICS operations.",
+   "objective_ar": "الاكتشاف الفوري لحوادث الأمن السيبراني وتهديداته والتعامل معها لحماية تشغيل الأنظمة التشغيلية."
+  },
+  {
+   "id": "2-13",
+   "domain": "2",
+   "title_en": "Physical Security",
+   "title_ar": "الأمن المادي",
+   "objective_en": "To ensure the protection of OT/ICS assets from unauthorized physical access, loss, theft, and damage.",
+   "objective_ar": "حماية أصول الأنظمة التشغيلية من الوصول المادي غير المصرح به والفقد والسرقة والتلف."
+  },
+  {
+   "id": "3-1",
+   "domain": "3",
+   "title_en": "Cybersecurity Resilience Aspects of Business Continuity Management",
+   "title_ar": "جوانب صمود الأمن السيبراني في إدارة استمرارية الأعمال",
+   "objective_en": "To ensure the inclusion of cybersecurity resiliency requirements within the organization's business continuity management and to minimize the impact on the OT/ICS environment from disasters caused by cybersecurity incidents.",
+   "objective_ar": "تضمين متطلبات صمود الأمن السيبراني في استمرارية الأعمال لتقليل أثر الحوادث على بيئة الأنظمة التشغيلية."
+  },
+  {
+   "id": "4-1",
+   "domain": "4",
+   "title_en": "Third-Party Cybersecurity",
+   "title_ar": "الأمن السيبراني للأطراف الخارجية",
+   "objective_en": "To ensure the protection of organizational assets against cybersecurity risks related to third-parties, including manufacturers, vendors and suppliers of OT/ICS hardware, products and services.",
+   "objective_ar": "حماية أصول الجهة من مخاطر الأمن السيبراني المتعلقة بالأطراف الخارجية."
+  }
+ ],
+ "controls": [
+  {
+   "id": "1-1-1",
+   "subdomain": "1-1"
+  },
+  {
+   "id": "1-1-2",
+   "subdomain": "1-1"
+  },
+  {
+   "id": "1-1-3",
+   "subdomain": "1-1"
+  },
+  {
+   "id": "1-2-1",
+   "subdomain": "1-2"
+  },
+  {
+   "id": "1-3-1",
+   "subdomain": "1-3"
+  },
+  {
+   "id": "1-4-1",
+   "subdomain": "1-4"
+  },
+  {
+   "id": "1-4-2",
+   "subdomain": "1-4"
+  },
+  {
+   "id": "1-5-1",
+   "subdomain": "1-5"
+  },
+  {
+   "id": "1-5-2",
+   "subdomain": "1-5"
+  },
+  {
+   "id": "1-5-3",
+   "subdomain": "1-5"
+  },
+  {
+   "id": "1-5-4",
+   "subdomain": "1-5"
+  },
+  {
+   "id": "1-6-1",
+   "subdomain": "1-6"
+  },
+  {
+   "id": "1-6-2",
+   "subdomain": "1-6"
+  },
+  {
+   "id": "1-7-1",
+   "subdomain": "1-7"
+  },
+  {
+   "id": "1-7-2",
+   "subdomain": "1-7"
+  },
+  {
+   "id": "1-8-1",
+   "subdomain": "1-8"
+  },
+  {
+   "id": "1-8-2",
+   "subdomain": "1-8"
+  },
+  {
+   "id": "2-1-1",
+   "subdomain": "2-1"
+  },
+  {
+   "id": "2-1-2",
+   "subdomain": "2-1"
+  },
+  {
+   "id": "2-2-1",
+   "subdomain": "2-2"
+  },
+  {
+   "id": "2-2-2",
+   "subdomain": "2-2"
+  },
+  {
+   "id": "2-3-1",
+   "subdomain": "2-3"
+  },
+  {
+   "id": "2-3-2",
+   "subdomain": "2-3"
+  },
+  {
+   "id": "2-4-1",
+   "subdomain": "2-4"
+  },
+  {
+   "id": "2-4-2",
+   "subdomain": "2-4"
+  },
+  {
+   "id": "2-5-1",
+   "subdomain": "2-5"
+  },
+  {
+   "id": "2-5-2",
+   "subdomain": "2-5"
+  },
+  {
+   "id": "2-6-1",
+   "subdomain": "2-6"
+  },
+  {
+   "id": "2-6-2",
+   "subdomain": "2-6"
+  },
+  {
+   "id": "2-7-1",
+   "subdomain": "2-7"
+  },
+  {
+   "id": "2-7-2",
+   "subdomain": "2-7"
+  },
+  {
+   "id": "2-8-1",
+   "subdomain": "2-8"
+  },
+  {
+   "id": "2-8-2",
+   "subdomain": "2-8"
+  },
+  {
+   "id": "2-9-1",
+   "subdomain": "2-9"
+  },
+  {
+   "id": "2-9-2",
+   "subdomain": "2-9"
+  },
+  {
+   "id": "2-10-1",
+   "subdomain": "2-10"
+  },
+  {
+   "id": "2-10-2",
+   "subdomain": "2-10"
+  },
+  {
+   "id": "2-11-1",
+   "subdomain": "2-11"
+  },
+  {
+   "id": "2-11-2",
+   "subdomain": "2-11"
+  },
+  {
+   "id": "2-12-1",
+   "subdomain": "2-12"
+  },
+  {
+   "id": "2-12-2",
+   "subdomain": "2-12"
+  },
+  {
+   "id": "2-13-1",
+   "subdomain": "2-13"
+  },
+  {
+   "id": "2-13-2",
+   "subdomain": "2-13"
+  },
+  {
+   "id": "3-1-1",
+   "subdomain": "3-1"
+  },
+  {
+   "id": "3-1-2",
+   "subdomain": "3-1"
+  },
+  {
+   "id": "4-1-1",
+   "subdomain": "4-1"
+  },
+  {
+   "id": "4-1-2",
+   "subdomain": "4-1"
+  }
+ ]
+}

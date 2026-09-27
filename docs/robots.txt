@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://dir.3li.info/sitemap.xml

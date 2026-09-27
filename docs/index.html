@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" data-theme="dark">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; font-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'none'" />
+  <title>درع Dir'</title>
+  <meta name="description" content="درع ميدان سيبراني مفتوح لمحطة تحلية مياه بحر سعودية افتراضية متوائم مع ضوابط الأنظمة التشغيلية. Dir' is an open seawater desalination plant cyber range aligned to the NCA OT controls." />
+  <link rel="canonical" href="https://dir.3li.info/" />
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="درع Dir'" />
+  <meta property="og:description" content="An open seawater desalination plant cyber range for Saudi Arabia. Set your defenses, launch an attack and watch the safety system decide the ending." />
+  <meta property="og:url" content="https://dir.3li.info/" />
+  <meta property="og:image" content="https://dir.3li.info/og.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="stylesheet" href="assets/fonts.css" />
+  <link rel="stylesheet" href="assets/styles.css" />
+</head>
+<body>
+  <a class="skip" href="#main" data-t="skip">Skip to content</a>
+
+  <header class="masthead">
+    <div class="wrap">
+      <div class="mast-top">
+        <div class="brand">
+          <svg class="mark" viewBox="0 0 48 48" aria-hidden="true" fill="none">
+            <path d="M24 4 L40 10 V22 C40 34 33 41 24 45 C15 41 8 34 8 22 V10 Z" fill="currentColor" opacity="0.16"/>
+            <path d="M24 4 L40 10 V22 C40 34 33 41 24 45 C15 41 8 34 8 22 V10 Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
+            <path d="M15.5 23 l6 6 l11 -13" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <span class="brand-names">
+            <span class="brand-ar">درع</span>
+            <span class="brand-en">Dir'</span>
+          </span>
+        </div>
+        <div class="mast-tools">
+          <button class="btn-ghost" id="theme-toggle" type="button" aria-label="Switch theme">
+            <svg id="theme-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4 12H2M22 12h-2M5 5l1.5 1.5M17.5 17.5 19 19M19 5l-1.5 1.5M6.5 17.5 5 19" stroke-linecap="round"/></svg>
+            <span id="theme-label">Dark</span>
+          </button>
+          <button class="btn-ghost" id="lang-toggle" type="button" aria-label="Switch to Arabic">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.6 3.8 5.9 3.8 9S14.5 18.4 12 21c-2.5-2.6-3.8-5.9-3.8-9S9.5 5.6 12 3z"/></svg>
+            <span id="lang-label">English</span>
+          </button>
+        </div>
+      </div>
+      <p class="tagline" data-t="tagline">A seawater desalination plant cyber range for Saudi Arabia</p>
+      <p class="mast-source" data-t="mast.source"></p>
+      <div class="mini" id="mini" hidden>
+        <span class="mini-dot" id="mini-dot"></span>
+        <span class="mini-label" data-t="mini.posture">Posture</span>
+        <span class="mini-value" id="mini-value"></span>
+        <span class="mini-extra" id="mini-extra" hidden></span>
+      </div>
+    </div>
+    <div class="duneridge" aria-hidden="true"></div>
+  </header>
+
+  <nav class="tabs" aria-label="Sections" id="tabs-nav">
+    <div class="wrap">
+      <div class="tablist" role="tablist" id="tablist"></div>
+    </div>
+  </nav>
+
+  <main id="main">
+    <div class="wrap">
+      <div id="boot" class="boot">...</div>
+      <noscript>
+        <div class="noscript">
+          <strong>درع</strong> يحتاج إلى تفعيل جافاسكربت لعرض الميدان الحي.
+          <br />
+          Dir' needs JavaScript enabled to run the live range.
+        </div>
+      </noscript>
+      <div id="panels" hidden></div>
+    </div>
+  </main>
+
+  <footer class="foot">
+    <div class="wrap">
+      <span data-t="footer.license"></span>
+      <span>
+        <a id="foot-code" href="https://github.com/SiteQ8/Dir" data-t="about.code">Source code</a>
+        <span class="dot"> &middot; </span>
+        <a id="foot-fw" href="#" target="_blank" rel="noopener" data-t="footer.framework">NCA OTCC</a>
+        <span class="dot"> &middot; </span>
+        <span id="foot-ver"></span>
+      </span>
+    </div>
+  </footer>
+
+  <script type="module" src="assets/app.js"></script>
+</body>
+</html>

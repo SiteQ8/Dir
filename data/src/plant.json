@@ -1,0 +1,261 @@
+{
+  "units": [
+    {
+      "id": "intake",
+      "order": 1,
+      "level": "L1",
+      "en": "Seawater intake",
+      "ar": "سحب مياه البحر",
+      "desc": {
+        "en": "Screened seawater is drawn from the Gulf and its quality is measured before treatment begins.",
+        "ar": "تُسحب مياه البحر المصفّاة من الخليج وتُقاس جودتها قبل أن تبدأ المعالجة."
+      },
+      "vars": [
+        {
+          "key": "seawater_turbidity",
+          "en": "Seawater turbidity",
+          "ar": "عكارة مياه البحر",
+          "unit": "NTU",
+          "normal": 6,
+          "min": 0,
+          "warn": 20,
+          "trip": 35,
+          "limit": 50
+        },
+        {
+          "key": "intake_flow",
+          "en": "Intake flow",
+          "ar": "تدفق السحب",
+          "unit": "m3/h",
+          "normal": 9500,
+          "min": 6000,
+          "warn": 11500,
+          "trip": 12500,
+          "limit": 13500
+        }
+      ],
+      "short": {
+        "en": "Intake",
+        "ar": "السحب"
+      },
+      "display": "seawater_turbidity"
+    },
+    {
+      "id": "pretreat",
+      "order": 2,
+      "level": "L1",
+      "en": "Pretreatment",
+      "ar": "المعالجة الأولية",
+      "desc": {
+        "en": "Coagulation and filtration remove particles so the water reaching the membranes stays clean.",
+        "ar": "تزيل عمليتا التخثير والترشيح العوالق حتى يبقى الماء الواصل إلى الأغشية نظيفًا."
+      },
+      "vars": [
+        {
+          "key": "sdi",
+          "en": "Silt density index",
+          "ar": "دليل كثافة الطمي",
+          "unit": "SDI",
+          "normal": 2.5,
+          "min": 0,
+          "warn": 4.0,
+          "trip": 5.0,
+          "limit": 6.0
+        },
+        {
+          "key": "filter_dp",
+          "en": "Filter differential pressure",
+          "ar": "فرق ضغط المرشح",
+          "unit": "bar",
+          "normal": 0.4,
+          "min": 0,
+          "warn": 0.9,
+          "trip": 1.2,
+          "limit": 1.5
+        }
+      ],
+      "short": {
+        "en": "Pretreatment",
+        "ar": "الأولية"
+      },
+      "display": "sdi"
+    },
+    {
+      "id": "hpp",
+      "order": 3,
+      "level": "L1",
+      "en": "High-pressure pumps",
+      "ar": "مضخات الضغط العالي",
+      "desc": {
+        "en": "High-pressure pumps and energy recovery raise the feed to the pressure the membranes need and this is the most sensitive point in the plant.",
+        "ar": "ترفع مضخات الضغط العالي واسترجاع الطاقة ضغط التغذية إلى ما تتطلبه الأغشية وهذه أكثر النقاط حساسية في المحطة."
+      },
+      "vars": [
+        {
+          "key": "hp_pressure",
+          "en": "High-pressure discharge",
+          "ar": "ضغط الطرد العالي",
+          "unit": "bar",
+          "normal": 62,
+          "min": 45,
+          "warn": 72,
+          "trip": 78,
+          "limit": 85
+        },
+        {
+          "key": "pump_vibration",
+          "en": "Pump vibration",
+          "ar": "اهتزاز المضخة",
+          "unit": "mm/s",
+          "normal": 2.8,
+          "min": 0,
+          "warn": 6.0,
+          "trip": 8.5,
+          "limit": 11
+        }
+      ],
+      "short": {
+        "en": "Pumps",
+        "ar": "المضخات"
+      },
+      "display": "hp_pressure",
+      "critical": true
+    },
+    {
+      "id": "ro",
+      "order": 4,
+      "level": "L1",
+      "en": "Reverse osmosis",
+      "ar": "التناضح العكسي",
+      "desc": {
+        "en": "Membrane trains push the water through fine membranes that hold back the salt and let fresh water pass.",
+        "ar": "تدفع صفوف الأغشية الماء عبر أغشية دقيقة تحجز الملح وتسمح بمرور الماء العذب."
+      },
+      "vars": [
+        {
+          "key": "permeate_conductivity",
+          "en": "Permeate conductivity",
+          "ar": "موصلية الماء المنتَج",
+          "unit": "uS/cm",
+          "normal": 320,
+          "min": 0,
+          "warn": 600,
+          "trip": 900,
+          "limit": 1200
+        },
+        {
+          "key": "membrane_dp",
+          "en": "Membrane differential pressure",
+          "ar": "فرق ضغط الأغشية",
+          "unit": "bar",
+          "normal": 1.6,
+          "min": 0,
+          "warn": 2.6,
+          "trip": 3.2,
+          "limit": 3.8
+        }
+      ],
+      "short": {
+        "en": "Osmosis",
+        "ar": "التناضح"
+      },
+      "display": "permeate_conductivity",
+      "critical": true
+    },
+    {
+      "id": "post",
+      "order": 5,
+      "level": "L1",
+      "en": "Post-treatment",
+      "ar": "المعالجة النهائية",
+      "desc": {
+        "en": "Remineralization and chlorination make the water fit to drink and the chlorine dose must stay within a safe band.",
+        "ar": "تعيد المعالجة النهائية المعادن وتضيف الكلور ليصبح الماء صالحًا للشرب ويجب أن تبقى جرعة الكلور ضمن نطاق آمن."
+      },
+      "vars": [
+        {
+          "key": "cl2_residual",
+          "en": "Chlorine residual",
+          "ar": "الكلور المتبقي",
+          "unit": "mg/L",
+          "normal": 0.6,
+          "min": 0.2,
+          "warn": 1.5,
+          "trip": 2.5,
+          "limit": 4.0
+        },
+        {
+          "key": "product_ph",
+          "en": "Product pH",
+          "ar": "حموضة الماء المنتَج",
+          "unit": "pH",
+          "normal": 7.6,
+          "min": 6.5,
+          "warn": 8.6,
+          "trip": 9.2,
+          "limit": 9.8
+        }
+      ],
+      "short": {
+        "en": "Post-treatment",
+        "ar": "النهائية"
+      },
+      "display": "cl2_residual"
+    },
+    {
+      "id": "product",
+      "order": 6,
+      "level": "L1",
+      "en": "Product water",
+      "ar": "الماء المنتَج",
+      "desc": {
+        "en": "Treated water is stored and sent to the network while the leftover brine is returned to the sea within limits.",
+        "ar": "يُخزّن الماء المعالج ويُرسل إلى الشبكة بينما تُعاد المياه المالحة المتبقية إلى البحر ضمن الحدود."
+      },
+      "vars": [
+        {
+          "key": "reservoir_level",
+          "en": "Reservoir level",
+          "ar": "منسوب الخزان",
+          "unit": "%",
+          "normal": 60,
+          "min": 15,
+          "warn": 88,
+          "trip": 93,
+          "limit": 98
+        },
+        {
+          "key": "brine_salinity",
+          "en": "Brine salinity",
+          "ar": "ملوحة المياه المرتجعة",
+          "unit": "g/L",
+          "normal": 68,
+          "min": 45,
+          "warn": 80,
+          "trip": 88,
+          "limit": 95
+        }
+      ],
+      "short": {
+        "en": "Product",
+        "ar": "المنتَج"
+      },
+      "display": "reservoir_level"
+    }
+  ],
+  "sis": {
+    "en": "Safety instrumented system",
+    "ar": "نظام السلامة المزود بالأجهزة",
+    "abbr": "SIS",
+    "esd_en": "Emergency shutdown",
+    "esd_ar": "الإيقاف الطارئ",
+    "guards": [
+      "hp_pressure",
+      "cl2_residual"
+    ],
+    "desc": {
+      "en": "The safety system watches the high-pressure discharge and the chlorine residual, and on a high reading it trips an emergency shutdown that stops the high-pressure pumps, isolates the dosing and diverts off-spec water to waste so it never reaches the network.",
+      "ar": "يراقب نظام السلامة ضغط الطرد العالي والكلور المتبقي وعند ارتفاع القراءة يشغّل إيقافًا طارئًا يوقف مضخات الضغط العالي ويعزل الجرعات ويحوّل الماء المخالف للمواصفة إلى الصرف حتى لا يصل إلى الشبكة."
+    }
+  }
+}

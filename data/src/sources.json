@@ -1,0 +1,78 @@
+{
+ "sources": [
+  {
+   "id": "otcc",
+   "en": "NCA Operational Technology Cybersecurity Controls (OTCC-1:2022)",
+   "ar": "ضوابط الأنظمة التشغيلية OTCC-1 لعام 2022 من الهيئة الوطنية للأمن السيبراني",
+   "url": "https://nca.gov.sa/otcc_en.pdf",
+   "use": {
+    "en": "The OT control framework this range is aligned to",
+    "ar": "إطار ضوابط الأنظمة التشغيلية الذي يتوائم معه هذا الميدان"
+   }
+  },
+  {
+   "id": "ecc",
+   "en": "NCA Essential Cybersecurity Controls (ECC-2:2024)",
+   "ar": "الضوابط الأساسية للأمن السيبراني ECC-2 لعام 2024 من الهيئة الوطنية للأمن السيبراني",
+   "url": "https://nca.gov.sa/en/regulatory-documents/controls-list/ecc/",
+   "use": {
+    "en": "The baseline the OTCC extends",
+    "ar": "الأساس الذي توسّعه ضوابط الأنظمة التشغيلية"
+   }
+  },
+  {
+   "id": "ncs",
+   "en": "NCA National Cryptographic Standards",
+   "ar": "المعايير الوطنية للتشفير من الهيئة الوطنية للأمن السيبراني",
+   "url": "https://nca.gov.sa/en/regulatory-documents/",
+   "use": {
+    "en": "Referenced by the cryptography controls",
+    "ar": "مرجع ضوابط التشفير"
+   }
+  },
+  {
+   "id": "nist82",
+   "en": "NIST SP 800-82 Rev 3, Guide to Operational Technology Security",
+   "ar": "دليل تأمين التقنيات التشغيلية NIST SP 800-82 الإصدار 3",
+   "url": "https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-82r3.pdf",
+   "use": {
+    "en": "The reference for OT architecture and the defensive controls",
+    "ar": "المرجع لبنية التقنيات التشغيلية والضوابط الدفاعية"
+   }
+  },
+  {
+   "id": "nist61",
+   "en": "NIST SP 800-61 Rev 3, Incident Response Recommendations and Considerations",
+   "ar": "توصيات الاستجابة للحوادث NIST SP 800-61 الإصدار 3",
+   "url": "https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-61r3.pdf",
+   "use": {
+    "en": "The response lifecycle behind the playbooks",
+    "ar": "دورة الاستجابة التي تقوم عليها الأدلة"
+   }
+  },
+  {
+   "id": "iec62443",
+   "en": "ISA/IEC 62443 series of standards for industrial automation and control systems security",
+   "ar": "سلسلة معايير ISA/IEC 62443 لأمن أنظمة الأتمتة والتحكم الصناعية",
+   "url": "https://www.isa.org/standards-and-publications/isa-standards/isa-iec-62443-series-of-standards",
+   "use": {
+    "en": "Zones and conduits and the seven foundational requirements",
+    "ar": "المناطق والقنوات والمتطلبات الأساسية السبعة"
+   }
+  },
+  {
+   "id": "attackics",
+   "en": "MITRE ATT&CK for ICS",
+   "ar": "إطار MITRE ATT&CK للأنظمة الصناعية",
+   "url": "https://attack.mitre.org/matrices/ics/",
+   "use": {
+    "en": "The technique behind each step of every attack path",
+    "ar": "الأسلوب وراء كل خطوة في مسارات الهجوم"
+   }
+  }
+ ],
+ "note": {
+  "en": "Dir' models a fictional and composite Saudi seawater desalination plant. It is a training environment only and does not represent any real facility, its design or its data. The attack paths are inspired by publicly documented industrial incidents and carry no operational detail that could aid an attacker.",
+  "ar": "يحاكي درع محطة تحلية مياه بحر سعودية افتراضية مركبة فهو بيئة تدريب فقط ولا يمثل أي منشأة حقيقية ولا تصميمها ولا بياناتها كما أن مسارات الهجوم مستوحاة من حوادث صناعية موثقة علنًا ولا تحمل أي تفصيل تشغيلي قد يعين مهاجمًا."
+ }
+}

@@ -1,0 +1,13 @@
+{
+  "schema": "dir/1",
+  "name_en": "Dir'",
+  "name_ar": "درع",
+  "repo": "Dir",
+  "slug": "dir",
+  "domain": "dir.3li.info",
+  "owner": "SiteQ8",
+  "author": "Ali AlEnezi",
+  "version": "1.0.0",
+  "tagline_en": "A cyber range for a Saudi seawater desalination plant, aligned to the NCA operational technology controls",
+  "tagline_ar": "ميدان سيبراني لمحطة تحلية مياه بحر سعودية متوائم مع ضوابط الأنظمة التشغيلية الصادرة عن الهيئة الوطنية للأمن السيبراني"
+}

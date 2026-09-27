@@ -1,0 +1,498 @@
+{
+  "tagline": {
+    "en": "A seawater desalination plant cyber range for Saudi Arabia",
+    "ar": "ميدان سيبراني لمحطة تحلية مياه بحر في المملكة العربية السعودية"
+  },
+  "mast.source": {
+    "en": "A training range for defending industrial control systems, grounded in the NCA operational technology controls, IEC 62443 and MITRE ATT&CK for ICS",
+    "ar": "ميدان تدريب للدفاع عن أنظمة التحكم الصناعية مبني على ضوابط الأنظمة التشغيلية من الهيئة الوطنية للأمن السيبراني ومعيار IEC 62443 وإطار MITRE ATT&CK"
+  },
+  "skip": {
+    "en": "Skip to content",
+    "ar": "انتقل إلى المحتوى"
+  },
+  "tabs.label": {
+    "en": "Sections",
+    "ar": "الأقسام"
+  },
+  "tab.range": {
+    "en": "The range",
+    "ar": "الميدان"
+  },
+  "tab.defenses": {
+    "en": "Defenses",
+    "ar": "الدفاعات"
+  },
+  "tab.architecture": {
+    "en": "Architecture",
+    "ar": "المعمارية"
+  },
+  "tab.glossary": {
+    "en": "Glossary",
+    "ar": "المسرد"
+  },
+  "tab.about": {
+    "en": "About",
+    "ar": "عن الأداة"
+  },
+  "lang.switch": {
+    "en": "العربية",
+    "ar": "English"
+  },
+  "lang.switchLabel": {
+    "en": "Switch to Arabic",
+    "ar": "التبديل إلى الإنجليزية"
+  },
+  "common.of": {
+    "en": "of",
+    "ar": "من"
+  },
+  "mini.posture": {
+    "en": "Posture",
+    "ar": "الجاهزية"
+  },
+  "mini.safe": {
+    "en": "{n} of {total} attacks stopped",
+    "ar": "{n} من {total} هجمات موقوفة"
+  },
+  "mini.setDefenses": {
+    "en": "Set your defenses to begin",
+    "ar": "حدد دفاعاتك للبدء"
+  },
+  "mini.release": {
+    "en": "an unsafe outcome is possible",
+    "ar": "النتيجة غير الآمنة ممكنة"
+  },
+  "range.title": {
+    "en": "The plant",
+    "ar": "المحطة"
+  },
+  "range.intro": {
+    "en": "Watch the process live, launch an attack and see whether your defenses and the safety system hold.",
+    "ar": "راقب العملية حية وأطلق هجومًا وشاهد هل تصمد دفاعاتك ونظام السلامة."
+  },
+  "range.pick": {
+    "en": "Choose a scenario",
+    "ar": "اختر سيناريو"
+  },
+  "range.launch": {
+    "en": "Launch attack",
+    "ar": "أطلق الهجوم"
+  },
+  "range.stop": {
+    "en": "Stop",
+    "ar": "أوقف"
+  },
+  "range.reset": {
+    "en": "Reset the plant",
+    "ar": "أعد ضبط المحطة"
+  },
+  "range.running": {
+    "en": "Attack in progress",
+    "ar": "الهجوم جارٍ"
+  },
+  "range.idle": {
+    "en": "Plant steady",
+    "ar": "المحطة مستقرة"
+  },
+  "range.divert": {
+    "en": "Divert to waste",
+    "ar": "تحويل إلى الصرف"
+  },
+  "range.tickLabel": {
+    "en": "Elapsed",
+    "ar": "المنقضي"
+  },
+  "range.defensesHint": {
+    "en": "You have not set any defenses, so open the Defenses tab first.",
+    "ar": "لم تحدد أي دفاعات لذا افتح تبويب الدفاعات أولًا."
+  },
+  "range.activeControls": {
+    "en": "Defenses in place",
+    "ar": "الدفاعات القائمة"
+  },
+  "range.none": {
+    "en": "none",
+    "ar": "لا شيء"
+  },
+  "range.detectedFlag": {
+    "en": "Detected",
+    "ar": "مكشوف"
+  },
+  "sis.title": {
+    "en": "Safety system",
+    "ar": "نظام السلامة"
+  },
+  "sis.armed": {
+    "en": "Armed",
+    "ar": "مسلّح"
+  },
+  "sis.disabled": {
+    "en": "Disabled",
+    "ar": "معطّل"
+  },
+  "sis.tripped": {
+    "en": "Tripped",
+    "ar": "مُفعَّل"
+  },
+  "sis.guarding": {
+    "en": "Guards the high-pressure discharge and the chlorine residual",
+    "ar": "يحمي ضغط الطرد العالي والكلور المتبقي"
+  },
+  "status.normal": {
+    "en": "Normal",
+    "ar": "طبيعي"
+  },
+  "status.warning": {
+    "en": "Warning",
+    "ar": "تحذير"
+  },
+  "status.trip": {
+    "en": "Safe shutdown",
+    "ar": "إيقاف آمن"
+  },
+  "status.release": {
+    "en": "Safety barrier failed",
+    "ar": "فشل حاجز السلامة"
+  },
+  "status.disruption": {
+    "en": "Operations blind",
+    "ar": "العمليات معماة"
+  },
+  "status.normalMsg": {
+    "en": "The plant is running within its safe limits.",
+    "ar": "تعمل المحطة ضمن حدودها الآمنة."
+  },
+  "status.warningMsg": {
+    "en": "A reading is leaving its safe band so the operator should act.",
+    "ar": "تخرج إحدى القراءات عن نطاقها الآمن لذا ينبغي للمشغّل أن يتصرف."
+  },
+  "status.tripMsg": {
+    "en": "The safety system tripped and brought the plant to a safe state, so no harm reached the network.",
+    "ar": "شغّل نظام السلامة الإيقاف ونقل المحطة إلى حالة آمنة فلم يصل أي ضرر إلى الشبكة."
+  },
+  "status.releaseMsg": {
+    "en": "The safety system was disabled and the process passed its safe limit, so the pumps and membranes were damaged.",
+    "ar": "عُطّل نظام السلامة وتجاوزت العملية حدها الآمن فتضررت المضخات والأغشية."
+  },
+  "status.disruptionMsg": {
+    "en": "Operations lost its wider view, yet local control kept the process safe.",
+    "ar": "فقدت العمليات رؤيتها الأوسع ومع ذلك أبقى التحكم المحلي العملية آمنة."
+  },
+  "kill.title": {
+    "en": "Attack path",
+    "ar": "مسار الهجوم"
+  },
+  "kill.blocked": {
+    "en": "Blocked",
+    "ar": "محجوب"
+  },
+  "kill.detected": {
+    "en": "Detected",
+    "ar": "مكشوف"
+  },
+  "kill.open": {
+    "en": "Succeeded",
+    "ar": "نجح"
+  },
+  "kill.pending": {
+    "en": "Not reached",
+    "ar": "لم يُبلغ"
+  },
+  "kill.blockedBy": {
+    "en": "Blocked by",
+    "ar": "حجبه"
+  },
+  "kill.detectedBy": {
+    "en": "Detected by",
+    "ar": "كشفه"
+  },
+  "kill.technique": {
+    "en": "Technique",
+    "ar": "الأسلوب"
+  },
+  "kill.inspiration": {
+    "en": "Inspired by",
+    "ar": "مستوحى من"
+  },
+  "outcome.title": {
+    "en": "Outcome",
+    "ar": "النتيجة"
+  },
+  "outcome.contained": {
+    "en": "Attack contained",
+    "ar": "احتُوي الهجوم"
+  },
+  "outcome.safeTrip": {
+    "en": "Safe shutdown",
+    "ar": "إيقاف آمن"
+  },
+  "outcome.release": {
+    "en": "Safety barrier failed",
+    "ar": "فشل حاجز السلامة"
+  },
+  "outcome.disruption": {
+    "en": "Operations disrupted",
+    "ar": "اضطراب في العمليات"
+  },
+  "outcome.containedMsg": {
+    "en": "Your defenses stopped the attack before it reached the process.",
+    "ar": "أوقفت دفاعاتك الهجوم قبل أن يبلغ العملية."
+  },
+  "outcome.safeTripMsg": {
+    "en": "The attack reached the process, yet the safety system tripped and prevented harm.",
+    "ar": "بلغ الهجوم العملية ومع ذلك شغّل نظام السلامة الإيقاف ومنع الضرر."
+  },
+  "outcome.releaseMsg": {
+    "en": "The attack disabled the safety system and drove the process past its limit.",
+    "ar": "عطّل الهجوم نظام السلامة ودفع العملية فوق حدها."
+  },
+  "outcome.disruptionMsg": {
+    "en": "The attack blinded operations, and clean backups are what bring it back.",
+    "ar": "أعمى الهجوم العمليات والنسخ الاحتياطية النظيفة هي ما يعيدها."
+  },
+  "outcome.detected": {
+    "en": "Your monitoring detected the intrusion along the way.",
+    "ar": "كشفت مراقبتك التسلل في أثناء الطريق."
+  },
+  "outcome.undetected": {
+    "en": "Nothing you deployed detected the intrusion.",
+    "ar": "لم يكشف أي مما نشرته التسلل."
+  },
+  "outcome.lesson": {
+    "en": "Lesson",
+    "ar": "الدرس"
+  },
+  "outcome.harden": {
+    "en": "Add the missing control",
+    "ar": "أضف الضابط الناقص"
+  },
+  "playbook.title": {
+    "en": "Incident response",
+    "ar": "الاستجابة للحادث"
+  },
+  "playbook.note": {
+    "en": "The phases follow a standard incident response lifecycle aligned to the NCA operational technology controls.",
+    "ar": "تتبع المراحل دورة استجابة قياسية للحوادث متوائمة مع ضوابط الأنظمة التشغيلية من الهيئة الوطنية للأمن السيبراني."
+  },
+  "def.title": {
+    "en": "Your defenses",
+    "ar": "دفاعاتك"
+  },
+  "def.intro": {
+    "en": "Spend a limited budget on the controls that block the attack paths, then take them into the range.",
+    "ar": "أنفق ميزانية محدودة على الضوابط التي تحجب مسارات الهجوم ثم خذها إلى الميدان."
+  },
+  "def.budget": {
+    "en": "Budget",
+    "ar": "الميزانية"
+  },
+  "def.spent": {
+    "en": "Spent",
+    "ar": "المنفق"
+  },
+  "def.remaining": {
+    "en": "Remaining",
+    "ar": "المتبقي"
+  },
+  "def.over": {
+    "en": "Over budget by {n}",
+    "ar": "تجاوزت الميزانية بمقدار {n}"
+  },
+  "def.points": {
+    "en": "points",
+    "ar": "نقطة"
+  },
+  "def.cost": {
+    "en": "Cost",
+    "ar": "التكلفة"
+  },
+  "def.enable": {
+    "en": "Enable this control",
+    "ar": "فعّل هذا الضابط"
+  },
+  "def.blocks": {
+    "en": "Blocks",
+    "ar": "يحجب"
+  },
+  "def.detects": {
+    "en": "Detects",
+    "ar": "يكشف"
+  },
+  "def.otcc": {
+    "en": "NCA OTCC controls",
+    "ar": "ضوابط الأنظمة التشغيلية"
+  },
+  "def.coverageFR": {
+    "en": "Coverage by foundational requirement",
+    "ar": "التغطية حسب المتطلب الأساسي"
+  },
+  "def.coverageZone": {
+    "en": "Coverage by level",
+    "ar": "التغطية حسب المستوى"
+  },
+  "def.coverageOTCC": {
+    "en": "Coverage by NCA OTCC control",
+    "ar": "التغطية حسب ضابط الأنظمة التشغيلية"
+  },
+  "def.clear": {
+    "en": "Clear all",
+    "ar": "امسح الكل"
+  },
+  "def.selectAll": {
+    "en": "Select all",
+    "ar": "اختر الكل"
+  },
+  "def.summary": {
+    "en": "With these defenses, {n} of {total} attacks are stopped before they reach the process.",
+    "ar": "بهذه الدفاعات تُوقف {n} من {total} هجمات قبل أن تبلغ العملية."
+  },
+  "def.saved": {
+    "en": "Saved in this browser",
+    "ar": "محفوظ في هذا المتصفح"
+  },
+  "def.storageOff": {
+    "en": "Browser storage is off, so your choices are not saved.",
+    "ar": "تخزين المتصفح معطّل لذا لا تُحفظ اختياراتك."
+  },
+  "def.scenariosBlocked": {
+    "en": "Scenarios this control affects",
+    "ar": "السيناريوهات التي يؤثر فيها هذا الضابط"
+  },
+  "def.affordHint": {
+    "en": "This control would take you over budget.",
+    "ar": "هذا الضابط سيتجاوز بك الميزانية."
+  },
+  "arch.title": {
+    "en": "Plant architecture",
+    "ar": "معمارية المحطة"
+  },
+  "arch.intro": {
+    "en": "The plant network is drawn in levels, and every defense belongs to one of them and maps to an NCA operational technology control.",
+    "ar": "تُرسم شبكة المحطة في مستويات وينتمي كل دفاع إلى واحد منها ويقابل ضابطًا من ضوابط الأنظمة التشغيلية."
+  },
+  "arch.purdue": {
+    "en": "Levels of the plant network",
+    "ar": "مستويات شبكة المحطة"
+  },
+  "arch.fr": {
+    "en": "The seven foundational requirements of IEC 62443",
+    "ar": "المتطلبات الأساسية السبعة لمعيار IEC 62443"
+  },
+  "arch.otcc": {
+    "en": "NCA OTCC subdomains covered",
+    "ar": "مكوّنات ضوابط الأنظمة التشغيلية المغطاة"
+  },
+  "arch.assets": {
+    "en": "Assets",
+    "ar": "الأصول"
+  },
+  "arch.controlsHere": {
+    "en": "Defenses at this level",
+    "ar": "الدفاعات في هذا المستوى"
+  },
+  "glo.title": {
+    "en": "Glossary",
+    "ar": "المسرد"
+  },
+  "glo.intro": {
+    "en": "The operational technology and control system terms used across the range.",
+    "ar": "مصطلحات التقنيات التشغيلية وأنظمة التحكم المستخدمة في الميدان."
+  },
+  "glo.search": {
+    "en": "Search terms",
+    "ar": "ابحث في المصطلحات"
+  },
+  "glo.count": {
+    "en": "{n} terms",
+    "ar": "{n} مصطلحًا"
+  },
+  "glo.ref": {
+    "en": "Reference",
+    "ar": "المرجع"
+  },
+  "empty.search": {
+    "en": "Nothing matches your search.",
+    "ar": "لا شيء يطابق بحثك."
+  },
+  "about.title": {
+    "en": "About Dir'",
+    "ar": "عن درع"
+  },
+  "about.what": {
+    "en": "Dir' is an open cyber range for a fictional Saudi seawater desalination plant, built so defenders can practise protecting industrial control systems.",
+    "ar": "درع ميدان سيبراني مفتوح لمحطة تحلية مياه بحر سعودية افتراضية بُني حتى يتدرب المدافعون على حماية أنظمة التحكم الصناعية."
+  },
+  "about.how": {
+    "en": "You set your defenses within a budget, launch one of the attack paths and watch the process react in real time as the safety system decides the ending.",
+    "ar": "تحدد دفاعاتك ضمن ميزانية وتطلق أحد مسارات الهجوم وتشاهد العملية تتفاعل لحظيًا بينما يقرر نظام السلامة النهاية."
+  },
+  "about.source": {
+    "en": "The defenses map to the NCA Operational Technology Cybersecurity Controls and follow NIST SP 800-82, the zones and requirements follow IEC 62443, and the attack steps follow MITRE ATT&CK for ICS.",
+    "ar": "تقابل الدفاعات ضوابط الأنظمة التشغيلية من الهيئة الوطنية للأمن السيبراني وتتبع دليل NIST SP 800-82 وتتبع المناطق والمتطلبات معيار IEC 62443 وتتبع خطوات الهجوم إطار MITRE ATT&CK"
+  },
+  "about.disclaimer": {
+    "en": "The plant is fictional and composite, it represents no real facility, and the attack paths carry no operational detail that could aid an attacker.",
+    "ar": "المحطة افتراضية مركبة ولا تمثل أي منشأة حقيقية ولا تحمل مسارات الهجوم أي تفصيل تشغيلي قد يعين مهاجمًا."
+  },
+  "about.mcp": {
+    "en": "An MCP server ships with the range so an AI assistant can teach from the same plant, controls, attack paths and playbooks.",
+    "ar": "يأتي مع الميدان خادم MCP حتى يتمكن مساعد الذكاء الاصطناعي من التعليم من المحطة والضوابط ومسارات الهجوم والأدلة نفسها."
+  },
+  "about.nameTitle": {
+    "en": "The name",
+    "ar": "الاسم"
+  },
+  "about.name": {
+    "en": "Dir' is the shield the old warriors carried into the field, and here you raise a shield over the plant and defend it.",
+    "ar": "درع هو الترس الذي كان المحاربون القدماء يحملونه إلى الميدان وهنا ترفع درعًا فوق المحطة وتدافع عنها."
+  },
+  "about.sources": {
+    "en": "Sources",
+    "ar": "المصادر"
+  },
+  "about.code": {
+    "en": "Source code",
+    "ar": "الشفرة المصدرية"
+  },
+  "footer.license": {
+    "en": "Open source under the MIT license. The referenced standards and frameworks belong to their owners.",
+    "ar": "مفتوح المصدر بترخيص MIT وتبقى المعايير والأطر المشار إليها ملكًا لأصحابها."
+  },
+  "footer.version": {
+    "en": "Version {v}",
+    "ar": "الإصدار {v}"
+  },
+  "footer.framework": {
+    "en": "NCA OTCC",
+    "ar": "ضوابط الأنظمة التشغيلية"
+  },
+  "theme.toLight": {
+    "en": "Light",
+    "ar": "فاتح"
+  },
+  "theme.toDark": {
+    "en": "Dark",
+    "ar": "داكن"
+  },
+  "theme.label": {
+    "en": "Switch theme",
+    "ar": "تبديل السمة"
+  },
+  "popup.title": {
+    "en": "For learning only",
+    "ar": "لأغراض التعليم فقط"
+  },
+  "popup.body1": {
+    "en": "Dir' is an educational cyber range. The plant is fictional and composite, and it has no relation to any real facility or company.",
+    "ar": "درع ميدان سيبراني تعليمي والمحطة فيه افتراضية مركبة لا علاقة لها بأي منشأة حقيقية أو جهة حقيقية."
+  },
+  "popup.body2": {
+    "en": "Use it to learn defensive engineering, not to operate or interfere with any live system.",
+    "ar": "استخدمه لتعلم هندسة الدفاع لا لتشغيل أي نظام فعلي أو العبث به."
+  },
+  "popup.ack": {
+    "en": "I understand",
+    "ar": "فهمت"
+  }
+}

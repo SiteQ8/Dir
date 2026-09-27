@@ -1,0 +1,210 @@
+{
+ "terms": [
+  {
+   "id": "ot",
+   "en": "Operational technology",
+   "ar": "التقنيات التشغيلية",
+   "def": {
+    "en": "The hardware and software that runs a physical process such as a desalination plant.",
+    "ar": "الأجهزة والبرمجيات التي تشغّل عملية مادية مثل محطة تحلية."
+   }
+  },
+  {
+   "id": "ics",
+   "en": "Industrial control system",
+   "ar": "نظام التحكم الصناعي",
+   "def": {
+    "en": "The controllers, sensors and consoles that measure and drive an industrial process.",
+    "ar": "أجهزة التحكم والمجسات والشاشات التي تقيس العملية الصناعية وتحركها."
+   }
+  },
+  {
+   "id": "scada",
+   "en": "Supervisory control and data acquisition",
+   "ar": "الإشراف والتحكم وجمع البيانات",
+   "def": {
+    "en": "The layer that gives operators a live view of the plant and lets them supervise it.",
+    "ar": "الطبقة التي تمنح المشغّلين رؤية حية للمحطة وتتيح لهم الإشراف عليها."
+   }
+  },
+  {
+   "id": "plc",
+   "en": "Programmable logic controller",
+   "ar": "متحكم منطقي قابل للبرمجة",
+   "def": {
+    "en": "A rugged controller that runs the logic driving pumps and valves in the field.",
+    "ar": "متحكم متين يشغّل المنطق الذي يحرك المضخات والصمامات في الميدان."
+   }
+  },
+  {
+   "id": "hmi",
+   "en": "Human machine interface",
+   "ar": "واجهة الإنسان والآلة",
+   "def": {
+    "en": "The screen through which an operator reads the process and sends commands.",
+    "ar": "الشاشة التي يقرأ المشغّل من خلالها العملية ويرسل الأوامر."
+   }
+  },
+  {
+   "id": "sis",
+   "en": "Safety instrumented system",
+   "ar": "نظام السلامة المزود بالأجهزة",
+   "def": {
+    "en": "An independent system that brings the process to a safe state when a dangerous reading appears.",
+    "ar": "نظام مستقل ينقل العملية إلى حالة آمنة عند ظهور قراءة خطرة."
+   },
+   "ref": "iec62443"
+  },
+  {
+   "id": "esd",
+   "en": "Emergency shutdown",
+   "ar": "الإيقاف الطارئ",
+   "def": {
+    "en": "The action that stops the pumps and isolates dosing to protect people and the plant.",
+    "ar": "الإجراء الذي يوقف المضخات ويعزل الجرعات لحماية الأشخاص والمحطة."
+   }
+  },
+  {
+   "id": "purdue",
+   "en": "Purdue model",
+   "ar": "نموذج بيردو",
+   "def": {
+    "en": "A way of drawing a plant network in levels from field devices up to the enterprise.",
+    "ar": "طريقة لرسم شبكة المحطة في مستويات من الأجهزة الميدانية حتى المؤسسة."
+   },
+   "ref": "nist82"
+  },
+  {
+   "id": "idmz",
+   "en": "Industrial demilitarized zone",
+   "ar": "المنطقة الصناعية منزوعة السلاح",
+   "def": {
+    "en": "A buffer network where traffic between the enterprise and the plant must stop and be checked.",
+    "ar": "شبكة عازلة يجب أن تتوقف عندها الحركة بين المؤسسة والمحطة وأن تُفحص."
+   },
+   "ref": "nist82"
+  },
+  {
+   "id": "historian",
+   "en": "Data historian",
+   "ar": "مؤرّخ البيانات",
+   "def": {
+    "en": "A server that stores the history of plant readings and is often abused as a pivot.",
+    "ar": "خادم يحفظ سجل قراءات المحطة وكثيرًا ما يُساء استخدامه للعبور."
+   }
+  },
+  {
+   "id": "ews",
+   "en": "Engineering workstation",
+   "ar": "محطة العمل الهندسية",
+   "def": {
+    "en": "The trusted machine that programs the controllers, which makes it a prized target.",
+    "ar": "الجهاز الموثوق الذي يبرمج أجهزة التحكم مما يجعله هدفًا ثمينًا."
+   }
+  },
+  {
+   "id": "iec62443",
+   "en": "IEC 62443",
+   "ar": "معيار IEC 62443",
+   "def": {
+    "en": "The international standard for securing industrial automation and control systems.",
+    "ar": "المعيار الدولي لتأمين أنظمة الأتمتة والتحكم الصناعية."
+   },
+   "ref": "iec62443"
+  },
+  {
+   "id": "zones",
+   "en": "Zones and conduits",
+   "ar": "المناطق والقنوات",
+   "def": {
+    "en": "Grouping assets by trust into zones and controlling the conduits that carry traffic between them.",
+    "ar": "تجميع الأصول حسب الثقة في مناطق وضبط القنوات التي تنقل الحركة بينها."
+   },
+   "ref": "iec62443"
+  },
+  {
+   "id": "attackics",
+   "en": "MITRE ATT&CK for ICS",
+   "ar": "إطار MITRE ATT&CK للأنظمة الصناعية",
+   "def": {
+    "en": "A public catalogue of the techniques attackers use against industrial control systems.",
+    "ar": "فهرس علني للأساليب التي يستخدمها المهاجمون ضد أنظمة التحكم الصناعية."
+   },
+   "ref": "attackics"
+  },
+  {
+   "id": "swro",
+   "en": "Seawater reverse osmosis",
+   "ar": "تحلية مياه البحر بالتناضح العكسي",
+   "def": {
+    "en": "Pushing seawater through fine membranes under high pressure so the salt is held back and fresh water passes.",
+    "ar": "دفع مياه البحر عبر أغشية دقيقة تحت ضغط عالٍ حتى يُحجز الملح ويمر الماء العذب."
+   }
+  },
+  {
+   "id": "membrane",
+   "en": "Reverse osmosis membrane",
+   "ar": "غشاء التناضح العكسي",
+   "def": {
+    "en": "The fine membrane that holds back the salt and lets fresh water through.",
+    "ar": "الغشاء الدقيق الذي يحجز الملح ويسمح بمرور الماء العذب."
+   }
+  },
+  {
+   "id": "hpp",
+   "en": "High-pressure pump",
+   "ar": "مضخة الضغط العالي",
+   "def": {
+    "en": "The pump that raises the feed to the pressure the membranes need and is the plant's most sensitive point.",
+    "ar": "المضخة التي ترفع ضغط التغذية إلى ما تتطلبه الأغشية وهي أكثر نقاط المحطة حساسية."
+   }
+  },
+  {
+   "id": "brine",
+   "en": "Brine",
+   "ar": "المياه المالحة المرتجعة",
+   "def": {
+    "en": "The concentrated salt water left after the fresh water is separated, returned to the sea within limits.",
+    "ar": "الماء المالح المركّز المتبقي بعد فصل الماء العذب ويُعاد إلى البحر ضمن الحدود."
+   }
+  },
+  {
+   "id": "chlorination",
+   "en": "Chlorination",
+   "ar": "الكلورة",
+   "def": {
+    "en": "Adding chlorine to disinfect the water and make it safe to drink within a controlled dose.",
+    "ar": "إضافة الكلور لتطهير الماء وجعله صالحًا للشرب ضمن جرعة مضبوطة."
+   }
+  },
+  {
+   "id": "fdi",
+   "en": "False data injection",
+   "ar": "حقن البيانات الزائفة",
+   "def": {
+    "en": "Feeding fake readings to the board so operators act on a false picture of the plant.",
+    "ar": "تغذية الشاشة بقراءات مزيفة حتى يتصرف المشغّلون وفق صورة كاذبة للمحطة."
+   }
+  },
+  {
+   "id": "did",
+   "en": "Defense in depth",
+   "ar": "الدفاع في العمق",
+   "def": {
+    "en": "Layering controls so that if one fails another still protects the process.",
+    "ar": "ترتيب الضوابط في طبقات حتى إذا سقطت واحدة بقيت أخرى تحمي العملية."
+   },
+   "ref": "nist82"
+  },
+  {
+   "id": "ci",
+   "en": "Critical infrastructure",
+   "ar": "البنية التحتية الحيوية",
+   "def": {
+    "en": "The facilities a country depends on, whose protection is a national priority in the Kingdom of Saudi Arabia.",
+    "ar": "المنشآت التي تعتمد عليها الدولة وحمايتها أولوية وطنية في المملكة العربية السعودية."
+   },
+   "ref": "otcc"
+  }
+ ]
+}
